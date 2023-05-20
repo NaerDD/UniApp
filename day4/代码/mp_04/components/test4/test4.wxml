@@ -1,0 +1,11 @@
+<view>
+  <view>
+    这里是组件的内部结构
+  </view>
+  <slot></slot>
+  <slot></slot>
+  <!-- name为before的第一个插槽 -->
+  <slot name="before"></slot>
+    <!-- name为after的第二个插槽 -->
+  <slot name="after"></slot>
+</view>

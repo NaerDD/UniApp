@@ -1,0 +1,45 @@
+<!--  局部引用组件 在message中也需要在json文件中进行引入才可以使用该组件 -->
+<!-- <my-test1 max="20"/> -->
+<!--  全局引用组件 在app.json中引入一次 其他组件中都可以使用 -->
+<!-- <my-test2/> -->
+<!-- <my-test3/> -->
+
+<!-- 单个插槽 由使用者决定具体的内容 -->
+<!-- <my-test4>
+  <view>
+    这是通过插槽填充1的内容
+  </view>
+  <view>
+    这是通过插槽填充2的内容
+  </view>
+  <view slot="before">
+    这里是插入到组件  slot name="before" 的位置上
+  </view>
+  <view slot="after">
+    这里是插入到组件  slot name="after" 的位置上
+  </view>
+</my-test4> -->
+
+<!-- 属性绑定 第一种方法 （父传子）  
+父组件数据传递给子组件 
+这里将home当做父 test5当做子组件 
+ -->
+ <!-- 
+     事件绑定 第二种方法 子传父
+     在子组件身上绑定一个叫 syncCount 的函数 改名为sync
+     然后在子组件中定义一个按钮 来触发这个事件，并将要传递给父组件的数据带上
+     父组件拿到数据进行数据更新
+  -->
+<my-test5 count="{{count}}" bind:sync="syncCount" class="customA" id="cA"></my-test5>
+
+<view>
+  ~~~~~~~~~~
+</view>
+<view>
+  父组件中，count值是：{{count}}
+</view>
+
+<!-- 第三种方法 自定义组件 子传父 父组件中拿到子组件的实例对象
+    绑定函数 然后在子组件上写一个类选择器 或者 id选择器
+ -->
+ <button bindtap="getChild">获取子组件的实例对象</button>

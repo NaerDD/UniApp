@@ -6,12 +6,14 @@ Page({
    */
   data: {
     //存放轮播图数据的列表
-    swiperList:[]
+    swiperList:[],
+    //存放九宫格数据的列表
+    gridList:[]
   },
   //获取轮播图数据的方法
   getSwiperList(){
     wx.request({
-      url: 'https://www.escook.cn/slides',
+      url: 'https://applet-base-api-t.itheima.net/slides',
       method:'GET',
       success:(res)=>{
         console.log(res);
@@ -19,7 +21,41 @@ Page({
           swiperList:res.data
         })
       }
-
+    })
+  },
+  //获取九宫格数据的方法
+  getGridList(){
+    wx.request({
+      url: 'https://applet-base-api-t.itheima.net/categories',
+      method:'GET',
+      success:(res)=>{
+        console.log(res);
+        this.setData({
+          gridList:res.data
+        })
+      }
+    })
+  },
+  //编程式导航 （跳转到tabbar页面 wx.switchTab 
+  // 包含参数：success fun 接口调用成功的回调函数
+  // 包含参数：fail fun 接口调用失败的回调函数
+  // 包含参数：complete fun 接口调用结束的回调函数（成功失败都会调用）
+  // ）
+  gotoMessage(){
+    wx.switchTab({
+      url: '/pages/message/message'
+    })
+  },
+  //编程式导航 （跳转到非tabbar页面 wx.navigateTo ）
+  gotoInfo(){
+    wx.navigateTo({
+      url: '/pages/info/info',
+    })
+  },
+  //编程式导航传参 
+  gotoinfo2(){
+    wx.navigateTo({
+      url: '/pages/info/info?name=ls&age=22',
     })
   },
 
@@ -28,6 +64,7 @@ Page({
    */
   onLoad(options) {
     this.getSwiperList();
+    this.getGridList();
   },
 
   /**
@@ -69,7 +106,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom() {
-
+    console.log("触发了上拉触底事件");
   },
 
   /**

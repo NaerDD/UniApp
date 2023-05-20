@@ -1,0 +1,6 @@
+<!--pages/info/info.wxml-->
+<text>pages/info/info.wxml</text>
+<!--  delta="1" 默认值1 -->
+<navigator open-type="navigateBack">返回导航页面</navigator>
+
+<button bindtap="goBackFun">后退</button>

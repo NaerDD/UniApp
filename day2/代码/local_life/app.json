@@ -2,13 +2,18 @@
   "pages":[
     "pages/home/home",
     "pages/message/message",
-    "pages/contact/contact"
+    "pages/contact/contact",
+    "pages/info/info",
+    "pages/shoplist1/shoplist1"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#2b4b6b",
     "navigationBarTitleText": "本地生活",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle": "dark"
   },
   "tabBar": {
     "list": [

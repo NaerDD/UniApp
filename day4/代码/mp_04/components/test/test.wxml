@@ -1,0 +1,9 @@
+<!--components/test/test.wxml-->
+<text>components/test/test.wxml</text>
+<view>
+  count的值是:{{count}}
+</view>
+<view>
+  max的值是:{{max}}
+</view>
+<button bindtap="addCount">点我+1</button>

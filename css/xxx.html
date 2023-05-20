@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./01.css">
+  <style>
+    html{
+      /* 定义CSS变量 */
+      --main-color:#C00000;
+    }
+    .box1,.box2{
+      /* background-color: #c00000; */
+      background-color:var(--main-color)
+    }
+    .box3{
+      /* color: #c00000; */
+      color:var(--main-color);
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+      同样一个颜色值可能在成千上百个地方被使用到，如果这个值发生了变化，需要全局搜索并且一个一个替换
+      使用css自定义属性 可以 在一个地方改了 其他地方自动变化
+
+      自定义属性在某个地方存储一个值，然后在其他许多地方引用它。另一个好处是语义化的标识。
+      比如，--main-text-color 会比 #00ff00 更易理解，尤其是这个颜色值在其他上下文中也被使用到。
+      自定义属性受级联的约束，并从其父级继承其值。
+   -->
+   <div class="container1">
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <div class="box3">box3</div>
+   </div>
+
+   <div class="container1">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+ </div>
+
+</body>
+</html>

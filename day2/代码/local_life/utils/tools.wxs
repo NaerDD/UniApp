@@ -1,0 +1,14 @@
+function splitPhone(str){
+  // 判断是不是手机号
+  if(str.length !== 11) return str
+  // 转换成字符串
+  var arr = str.split('')
+  // 在第三位第八位加-
+  arr.splice(3,0,'-')
+  arr.splice(8,0,'-')
+  // 字符串转回
+  return arr.join('')
+}
+module.exports = {
+  splitPhone:splitPhone
+}

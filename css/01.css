@@ -1,0 +1,33 @@
+.container1{
+  display: flex;
+  border: 1px solid black;
+  padding: 50px;
+
+}
+.container2{
+  display: flex;
+  border: 1px solid black;
+  padding: 50px;
+}
+.box1{
+  display: block;
+  border: 1px solid black;
+  padding: 100px;
+  align-items: center;
+  width: 100px;
+}
+.box2{
+  display: block;
+  border: 1px solid black;
+  padding: 100px;
+  width: 100px;
+}
+.box3{
+  display: block;
+  border: 1px solid black;
+  padding: 100px;
+  width: 100px;
+}
+html{
+  display: flex;
+}

@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/message/message",
+    "pages/contact/contact",
+    "pages/info/info",
+    "pages/shoplist1/shoplist1"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#2b4b6b",
+    "navigationBarTitleText": "本地生活",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "list": [
+        {
+          "pagePath":"pages/home/home",
+          "text":"首页",
+          "iconPath": "./images/zhuye_1.png",
+          "selectedIconPath": "./images/zhuye.png"
+        },
+        {
+          "pagePath":"pages/message/message",
+          "text":"消息",
+          "iconPath": "./images/xiaoxi_1.png",
+          "selectedIconPath": "./images/xiaoxi.png"
+        },
+        {
+          "pagePath":"pages/contact/contact",
+          "text":"联系我们",
+          "iconPath": "./images/dianhua_1.png",
+          "selectedIconPath": "./images/dianhua.png"
+        }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "my-test1":"/components/test/test",
+    "my-test2":"/components/test2/test2",
+    "my-test3":"/components/test3/test3",
+    "my-test4":"/components/test4/test4",
+    "my-test5":"/components/test5/test5"
+  }
+}

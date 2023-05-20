@@ -3,5 +3,6 @@
   "projectname": "local_life",
   "setting": {
     "compileHotReLoad": true
-  }
+  },
+  "condition": {}
 }
